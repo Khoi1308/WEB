@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <div class="container">
+      <header></header>
+      <nav>
+        <a><%= image_tag "logo.png" %></a>
+        <a>Dashboard</a>
+        <a>Tracks</a>
+        <a>Mentoring</a>
+        <a>Contribute</a>
+        <a>Donate</a>
+      </nav>
+
+      <article>
+        <%= yield %>
+      </article>
+
+      <%= yield :footer %>
+    </div>
+  </body>
+</html>

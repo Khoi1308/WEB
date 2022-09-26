@@ -1,0 +1,8 @@
+<h1><%= @books.title %></h1>
+<p><%= @books.content %></p>
+<%=  link_to "Edit", edit_book_path(@books) %>|
+<% content_for :footer do %>
+    <div>
+        This is footer
+    </div>
+<% end %>
